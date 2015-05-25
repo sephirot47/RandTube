@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">RandPorn</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="random_video_button">Get Random Video</string>
+    <string name="default_title">Random Video Title</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_result">ResultActivity</string>
+
+</resources>
