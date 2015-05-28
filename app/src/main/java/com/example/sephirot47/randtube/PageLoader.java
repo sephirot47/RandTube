@@ -1,4 +1,4 @@
-package com.example.sephirot47.randporn;
+package com.example.sephirot47.randtube;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -10,8 +10,6 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.util.EntityUtils;
 
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.ArrayList;
 
 public class PageLoader extends AsyncTask<Void, Void, String>
