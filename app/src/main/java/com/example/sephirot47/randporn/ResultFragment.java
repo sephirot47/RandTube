@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 public class ResultFragment extends Fragment
 {
-    private TextView titleText, categoriesText, urlText;
+    private TextView titleText, urlText;
     private String title = "";
     private ArrayList<String > categories;
     private String url = "";
@@ -31,10 +31,6 @@ public class ResultFragment extends Fragment
         if(i != null)
         {
             title = i.getStringExtra(PageLoader.TITLE_EXTRA);
-            categories = new ArrayList<String>();
-            String[] categoriesArray =  i.getStringExtra(PageLoader.CATEGORIES_EXTRA).split(";");
-            for(String category : categoriesArray)
-                categories.add(category);
             url = i.getStringExtra(PageLoader.URL_EXTRA);
         }
     }
@@ -46,17 +42,11 @@ public class ResultFragment extends Fragment
         View rootView = inflater.inflate(R.layout.fragment_result, container, false);
 
         titleText = (TextView) rootView.findViewById(R.id.text_title);
-        categoriesText = (TextView) rootView.findViewById(R.id.text_categories);
         urlText = (TextView)rootView.findViewById(R.id.text_url);
 
         titleText.setText(title);
-
-        String catStr = "";
-        for(int i = 0; i < categories.size(); ++i)
-            catStr += categories.get(i) + (i < categories.size() - 1 ? ", " : "");
-        categoriesText.setText(catStr);
-
         urlText.setText(url);
+        
         return rootView;
     }
 }

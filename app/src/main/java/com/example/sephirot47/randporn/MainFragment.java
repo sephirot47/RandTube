@@ -27,7 +27,7 @@ public class MainFragment extends Fragment
             @Override
             public void onClick(View view)
             {
-                new PageLoader().execute(PageLoader.PAGE_PORNHUB);
+                new PageLoader().execute();
             }
         });
 
