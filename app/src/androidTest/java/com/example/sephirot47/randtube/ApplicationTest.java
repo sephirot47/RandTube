@@ -1,4 +1,4 @@
-package com.example.sephirot47.randporn;
+package com.example.sephirot47.randtube;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
