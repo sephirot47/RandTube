@@ -7,5 +7,7 @@
     <string name="default_title">Random Video Title</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_result">RandTube - Random video</string>
+    <string name="favorite_text">Add to favourites: </string>
+    <string name="keyword_hint">Fixed keyword:</string>
 
 </resources>

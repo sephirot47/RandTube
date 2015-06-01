@@ -43,7 +43,7 @@ public class PageParser
             int end = src.substring(begin).indexOf(TITLE_END) + begin;
             return src.substring(begin, end);
         }
-        catch(Exception e) { e.printStackTrace(); return "Unknown title"; }
+        catch(Exception e) { e.printStackTrace(); return null; }
     }
 
     public static String getVideoUrl(String pageSource)
@@ -55,7 +55,7 @@ public class PageParser
             int end = src.substring(begin).indexOf(URL_VIDEO_END) + begin;
             return YoutubeVideoInfoDownloader.YOUTUBE_PAGE + src.substring(begin + 1, end);
         }
-        catch(Exception e) { e.printStackTrace(); return "Unknown url"; }
+        catch(Exception e) { e.printStackTrace(); return null; }
     }
 
     public static ArrayList<String> getRandomWords(String pageSource)
