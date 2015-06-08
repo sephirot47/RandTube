@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="center|center_vertical|center_horizontal">
+    android:gravity="center|center_vertical|center_horizontal"
+    android:background="#444444">
 
     <LinearLayout
         tools:context="com.example.sephirot47.randtube.ResultActivity$PlaceholderFragment"
@@ -28,7 +29,8 @@
             android:layout_height="wrap_content"
             android:text="Loading your random video..."
             android:id="@+id/idle_text"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
 
     </LinearLayout>
 
@@ -59,9 +61,9 @@
             android:gravity="center_horizontal"
             android:textSize="25sp"
             android:id="@+id/text_title"
-            android:textColor="#ff000000"
+            android:textColor="#ffffff"
             android:layout_gravity="center"
-            android:layout_alignParentTop="true"
+            android:layout_alignParentTop="false"
             android:layout_centerHorizontal="true" />
 
         <ImageView
@@ -73,7 +75,9 @@
             android:layout_weight="0.74"
             android:layout_alignParentLeft="false"
             android:layout_alignParentBottom="true"
-            android:layout_below="@+id/text_title" />
+            android:layout_below="@+id/text_title"
+            android:focusable="false"
+            android:elevation="5dp" />
 
     </RelativeLayout>
 
@@ -86,39 +90,25 @@
         android:id="@+id/searchLayout"
         android:layout_alignWithParentIfMissing="false"
         android:layout_alignParentRight="false"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
         android:gravity="center_vertical"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp">
+        android:layout_marginBottom="10dp"
+        android:padding="15dp">
 
-        <RelativeLayout
+        <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:layout_below="@+id/button_add_favorite"
+            android:text="@string/random_video_button"
+            android:id="@+id/button_get_random_video_results"
+            android:src="@drawable/dice"
+            android:background="#00000000"
+            android:tint="#ffffff"
+            android:layout_gravity="center"
+            android:layout_alignParentTop="false"
+            android:padding="5dp"
             android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp">
-
-            <ImageButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/random_video_button"
-                android:id="@+id/button_get_random_video_results"
-                android:src="@drawable/dice"
-                android:background="#00000000"
-                android:tint="#aa0000"
-                android:layout_gravity="center"
-                android:layout_alignParentTop="false"
-                android:layout_centerVertical="true"
-                android:padding="5dp"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
-
-        </RelativeLayout>
+            android:layout_alignParentEnd="false"
+            android:layout_centerInParent="true" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -127,12 +117,14 @@
             android:id="@+id/button_add_favorite"
             android:src="@drawable/abc_btn_rating_star_on_mtrl_alpha"
             android:background="#00000000"
-            android:tint="#aa0000"
+            android:tint="#aaaaaa"
             android:baselineAlignBottom="false"
             android:cropToPadding="false"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true" />
 
     </RelativeLayout>
 

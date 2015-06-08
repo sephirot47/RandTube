@@ -4,4 +4,7 @@
     tools:context="com.example.sephirot47.randtube.ResultActivity">
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_favourites"
+        android:title="@string/action_favourites"
+        android:orderInCategory="90" app:showAsAction="never" />
 </menu>
