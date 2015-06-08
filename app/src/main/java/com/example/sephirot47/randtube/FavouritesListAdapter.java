@@ -1,5 +1,7 @@
 package com.example.sephirot47.randtube;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +42,7 @@ public class FavouritesListAdapter extends BaseAdapter
             v = li.inflate(R.layout.item_row_favourites, null);
         }
 
-        VideoInformation p = vis.get(position);
+        final VideoInformation p = vis.get(position);
         if (p != null)
         {
             TextView titleText = (TextView) v.findViewById(R.id.item_row_favourites_title);
@@ -48,8 +50,22 @@ public class FavouritesListAdapter extends BaseAdapter
 
             titleText.setText(p.title);
             thumbnailView.setImageBitmap(p.thumbnail);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v)
+                {
+                    intentVideo(p.url);
+                }
+            });
         }
         return v;
+    }
+
+    private void intentVideo(String url)
+    {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+        MainFragment.fragment.startActivity(intent);
     }
 
 }
