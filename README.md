@@ -1,2 +1,2 @@
-# RandPorn
-Android application to get hihg quality random porn videos!
+# RandTube
+Android application to get hihg quality random Youtube videos!
