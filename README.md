@@ -1,2 +1,2 @@
 # RandTube
-Android application to get hihg quality random Youtube videos!
+Android application to get high quality random Youtube videos!
